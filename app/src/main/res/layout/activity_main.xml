@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.widget.www.jxrefeshlayout.JXRefreshLayout
+        android:id="@+id/refrshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D0363B">
 
-</android.support.constraint.ConstraintLayout>
+        <com.widget.www.jxrefeshlayout.ClassicHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#788987">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="这是一个内容"
+                android:textSize="300sp" />
+
+            <TextView
+                android:text="FOOTER"
+                android:layout_width="match_parent"
+                android:id="@+id/tv"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="21sp"
+                android:background="#119900"
+                android:textColor="#fff"
+                android:layout_height="150px" />
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </com.widget.www.jxrefeshlayout.JXRefreshLayout>
+
+</RelativeLayout>
